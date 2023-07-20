@@ -39,24 +39,25 @@
 
     </FrameLayout>
 
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/fragmentArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnImportant"
+        android:layout_below="@+id/tabArea">
+
+    </androidx.viewpager2.widget.ViewPager2>
+
     <Button
         android:id="@+id/btnImportant"
         style="@android:style/Widget.Button"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="100dp"
         android:layout_alignParentBottom="true"
         android:insetBottom="4dp"
         android:text="Important notes"
         android:textSize="24sp"
         app:iconPadding="0dp" />
-
-    <androidx.viewpager2.widget.ViewPager2
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/fragmentArea"
-        android:layout_below="@+id/tabArea">
-
-    </androidx.viewpager2.widget.ViewPager2>
 
 
 </RelativeLayout>

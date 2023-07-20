@@ -19,6 +19,7 @@ public class FragmentImportant extends Fragment {
 
     private NoteStorage storage;
     private NoteViewAdapter adapter;
+    private int size;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,7 @@ public class FragmentImportant extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         adapter = new org.example.notes2_0.NoteViewAdapter(getContext(), storage.getImportantNotes());
         recyclerView.setAdapter(adapter);
+        size = adapter.getItemCount();
         return view;
     }
 }

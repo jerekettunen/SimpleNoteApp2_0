@@ -18,11 +18,11 @@ import org.example.notes2_0.R;
 public class FragmentList extends Fragment {
     private NoteStorage storage;
     private NoteViewAdapter adapter;
+    private int size;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        System.out.println("Creating List");
 
     }
 
@@ -36,14 +36,17 @@ public class FragmentList extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         adapter = new org.example.notes2_0.NoteViewAdapter(getContext(), storage.getNotes());
         recyclerView.setAdapter(adapter);
-
+        size = adapter.getItemCount();
         return view;
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        adapter.notifyDataSetChanged();
+        if (size != adapter.getItemCount()){
+            adapter.notifyDataSetChanged();
+        }
+
     }
 
 }

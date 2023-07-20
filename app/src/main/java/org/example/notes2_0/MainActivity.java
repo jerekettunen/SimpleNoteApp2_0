@@ -65,16 +65,12 @@ public class MainActivity extends AppCompatActivity {
     private View.OnClickListener listener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            System.out.println("Trying");
             Fragment fragment;
             fragment = new FragmentImportant();
-            System.out.println("Trying2");
             getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame, fragment)
                         .commit();
-            System.out.println("Trying3");
             findViewById(R.id.frame).setAlpha(1);
-            System.out.println("Trying4");
             findViewById(R.id.fragmentArea).setAlpha(0);
 
         }
