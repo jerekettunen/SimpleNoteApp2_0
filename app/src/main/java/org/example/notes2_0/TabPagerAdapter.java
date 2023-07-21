@@ -17,15 +17,12 @@ public class TabPagerAdapter extends FragmentStateAdapter {
     @NonNull
     @Override
     public Fragment createFragment(int position) {
-        System.out.println("Creating fragment");
         switch (position) {
             case 0:
                 return new FragmentWelcome();
             case 1:
-                System.out.println("Creating fragment List");
                 return new FragmentList();
             case 2:
-                System.out.println("Creating add");
                 return new FragmentAdd();
             default:
                 return new FragmentWelcome();

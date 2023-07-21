@@ -23,10 +23,6 @@ public class NoteStorage {
         notes.remove(position);
     }
 
-    public void sortNotesTime() {
-        // using a lambda function where it compares the value LastNames and sorts accordingly
-        notes.sort((a,b) -> Long.compare(a.getTime(),b.getTime()));
-    }
 
     public ArrayList<Note> getNotes() {
         return notes;
@@ -39,6 +35,11 @@ public class NoteStorage {
     public void sortNotesLetter() {
         // using a lambda function where it compares the value LastNames and sorts accordingly
         notes.sort( (a, b) -> a.getTitle().toUpperCase().compareTo(b.getTitle().toUpperCase()));
+    }
+
+    public void sortNotesTime() {
+        // using a lambda function where it compares the value LastNames and sorts accordingly
+        notes.sort((a,b) -> Long.compare(a.getTime(),b.getTime()));
     }
 
     public ArrayList<Note> getImportantNotes() {

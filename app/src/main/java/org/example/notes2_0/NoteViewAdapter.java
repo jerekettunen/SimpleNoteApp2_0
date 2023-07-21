@@ -16,7 +16,6 @@ public class NoteViewAdapter extends RecyclerView.Adapter<NoteViewHolder>{
 
     private Context context;
     private ArrayList<Note> notes;
-    private int listPosition;
 
     public NoteViewAdapter(Context context, ArrayList<Note> notes) {
         this.context = context;
@@ -50,7 +49,6 @@ public class NoteViewAdapter extends RecyclerView.Adapter<NoteViewHolder>{
             @Override
             public void onClick(View view) {
                 // TODO add method
-
 
             }
         });
